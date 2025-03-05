@@ -1,16 +1,24 @@
-console.log("script.js is loaded");
-
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
 
     if (loginForm) {
         loginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevents the default form submission behavior
+            event.preventDefault(); // Prevents form from reloading the page
+            
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (username === "" || password === "") {
+                alert("Please enter both username and password.");
+                return;
+            }
+
+            // Save credentials to localStorage (for demonstration purposes)
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
 
             alert("Login successful! Redirecting...");
-
-            // Redirecting to the specified page (Change the URL as needed)
-            window.location.href = "https://yourbankwebsite.com"; 
+            window.location.href = "blank.html"; // Redirect to blank page
         });
     } else {
         console.error("Error: loginForm not found.");
