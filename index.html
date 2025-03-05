@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="logo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram Logo">
+    <div class="container">
+        <div class="mockup">
+            <img src="mockup.png" alt="Instagram Mobile Mockup">
         </div>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Phone number, username, or email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Log in</button>
-        </form>
-        <div class="other-options">
-            <a href="#">Forgot password?</a>
-            <span>Don't have an account? <a hr
+        <div class="login-box">
+            <h1>Instagram</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Phone number, username, or email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Log in</button>
+            </form>
+            <div class="links">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
