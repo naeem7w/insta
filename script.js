@@ -1,23 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const loginForm = document.getElementById("loginForm");
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form from refreshing the page
-            
-            const username = document.getElementById("username").value.trim();
-            const password = document.getElementById("password").value.trim();
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-            if (username === "" || password === "") {
-                alert("Please enter both username and password.");
-                return;
-            }
+    localStorage.setItem("savedUsername", username);
+    localStorage.setItem("savedPassword", password);
 
-            // Save user info in localStorage
-            localStorage.setItem("username", username);
-
-            alert("Login successful! Redirecting...");
-            window.location.href = "blank.html"; // Redirect to blank page
-        });
-    }
+    alert("Login successful! Redirecting...");
+    window.location.href = "blank.html";
 });
