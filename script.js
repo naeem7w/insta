@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (loginForm) {
         loginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevents form from reloading the page
+            event.preventDefault(); // Prevent form from refreshing the page
             
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
@@ -13,14 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Save credentials to localStorage (for demonstration purposes)
+            // Save user info in localStorage
             localStorage.setItem("username", username);
-            localStorage.setItem("password", password);
 
             alert("Login successful! Redirecting...");
             window.location.href = "blank.html"; // Redirect to blank page
         });
-    } else {
-        console.error("Error: loginForm not found.");
     }
 });
