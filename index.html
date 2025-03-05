@@ -8,11 +8,18 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Instagram</h2>
-        <p>To Proceed, First Login</p>
-        <input type="text" placeholder="Phone number, username, or email">
-        <input type="password" placeholder="Password">  <!-- Password field added -->
-        <button>Log In</button>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Logo" />
+        </div>
+        <form action="login_backend.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Log in</button>
+        </form>
+        <div class="other-options">
+            <a href="#">Forgot password?</a><br>
+            <span>Don't have an account? <a href="#">Sign up</a></span>
+        </div>
     </div>
 </body>
 </html>
