@@ -1,34 +1,21 @@
-<title>My Secure Login Page</title>
-<meta name="description" content="A secure login page for my project.">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Secure Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        form { display: inline-block; margin-top: 50px; }
+        input, button { display: block; margin: 10px auto; padding: 10px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="mockup">
-            <img src="mockup.png" alt="Instagram Mobile Mockup">
-        </div>
-        <div class="login-box">
-            <h1>Instagram</h1>
-            <form id="loginForm">
-                <div class="input-group">
-                    <input type="text" id="username" placeholder="Phone number, username, or email" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Log in</button>
-            </form>
-            <div class="links">
-                <a href="#">Forgot password?</a>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+    <h2>Login</h2>
+    <form action="https://your-backend-server.com/login" method="POST">
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+    </form>
 </body>
 </html>
